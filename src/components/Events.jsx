@@ -2,6 +2,14 @@ const Events = () => {
   const handleMyClick = (e) => {
     console.log(e);
   };
+
+  const renderSomething = (x) => {
+    if (x) {
+      return <h1>True</h1>;
+    } else {
+      return <h1>False</h1>;
+    }
+  };
   return (
     <div>
       <div>
@@ -12,6 +20,7 @@ const Events = () => {
           Click Aqui Também
         </button>
       </div>
+      {renderSomething(true)}
     </div>
   );
 };
