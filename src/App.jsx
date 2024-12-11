@@ -11,6 +11,9 @@ function App() {
       <FirstComponent />
       <TemplateExpressions />
       <Events />
+      <div>
+        <img src="/img1.jpg" alt="Imagem 1" />
+      </div>
     </div>
   );
 }
