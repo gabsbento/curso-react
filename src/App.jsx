@@ -1,10 +1,10 @@
 import "./App.css";
+import ConditionalRender from "./components/ConditionalRender";
 
-import ListRender from "./components/ListRender";
 function App() {
   return (
     <div className="App">
-      <ListRender />
+      <ConditionalRender />
     </div>
   );
 }
