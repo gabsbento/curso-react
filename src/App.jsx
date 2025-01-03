@@ -1,6 +1,7 @@
 import "./App.css";
 import CarDetails from "./components/CarDetails";
 import ConditionalRender from "./components/ConditionalRender";
+import Fragment from "./components/Fragment";
 
 function App() {
   const cars = [
@@ -24,6 +25,7 @@ function App() {
           key={index}
         />
       ))}
+      <Fragment propFragment={"Terceiro titulo"}/>
     </div>
   );
 }
