@@ -2,6 +2,7 @@ import "./App.css";
 import CarDetails from "./components/CarDetails";
 import ConditionalRender from "./components/ConditionalRender";
 import Container from "./components/Container";
+import ExecuteFunction from "./components/ExecuteFunction";
 import Fragment from "./components/Fragment";
 
 function App() {
@@ -10,6 +11,10 @@ function App() {
     {id: 2, brand: "Fiat", color: "Branco", status: true, km: 0},
     {id: 3, brand: "Hyundai", color: "Prata", status: true, km: 0}
   ]
+
+  function showMessage(){
+    console.log("Evento do componente pai");
+  }
   return (
     <div className="App">
       <ConditionalRender />
@@ -31,6 +36,7 @@ function App() {
       <Container>
         <p>Este é o container</p>
       </Container>
+      <ExecuteFunction myFunction={showMessage}/>
     </div>
   );
 }
