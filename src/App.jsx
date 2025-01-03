@@ -1,6 +1,7 @@
 import "./App.css";
 import CarDetails from "./components/CarDetails";
 import ConditionalRender from "./components/ConditionalRender";
+import Container from "./components/Container";
 import Fragment from "./components/Fragment";
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
         />
       ))}
       <Fragment propFragment={"Terceiro titulo"}/>
+      {/** Children */}
+      <Container>
+        <p>Este é o container</p>
+      </Container>
     </div>
   );
 }
