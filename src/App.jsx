@@ -1,9 +1,10 @@
 import "./App.css";
+import OtherContainer from "./components/OtherContainer";
 
 function App() {
   return (
     <div className="App">
-      <h1>Teste CSS</h1>
+      <OtherContainer />
     </div>
   );
 }
