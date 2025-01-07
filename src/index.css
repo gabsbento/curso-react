@@ -15,3 +15,11 @@ code {
 h1 {
   color: red;
 }
+
+.red-title {
+  color: red;
+}
+
+.green-title {
+  color: green;
+}
