@@ -7,11 +7,16 @@ function MyForm() {
 
   const handleName = (e) => setName(e.target.value);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("enviando form");
+  };
+
   console.log(name, email);
   return (
     <div>
       {/** */}
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Nome:</label>
           <input
