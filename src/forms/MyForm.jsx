@@ -6,6 +6,8 @@ function MyForm() {
   const [email, setEmail] = React.useState("");
 
   const handleName = (e) => setName(e.target.value);
+
+  console.log(name, email);
   return (
     <div>
       {/** */}
@@ -21,7 +23,12 @@ function MyForm() {
         </div>
         <label>
           <span>Email</span>
-          <input type="email" name="email" placeholder="Digite seu email" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Digite seu email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </label>
         <input type="submit" value="Enviar" />
       </form>
