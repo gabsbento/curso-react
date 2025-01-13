@@ -10,6 +10,8 @@ function MyForm({ user }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("enviando form");
+    setName("");
+    setEmail("");
   };
 
   console.log(name, email);
