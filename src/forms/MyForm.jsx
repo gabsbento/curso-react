@@ -4,6 +4,7 @@ import "./MyForm.css";
 function MyForm({ user }) {
   const [name, setName] = React.useState(user ? user.name : "");
   const [email, setEmail] = React.useState(user ? user.email : "");
+  const [bio, setBio] = React.useState("");
 
   const handleName = (e) => setName(e.target.value);
 
@@ -38,6 +39,17 @@ function MyForm({ user }) {
             onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
+        </label>
+        <label>
+          <span>Bio:</span>
+          <textarea
+            name="bio"
+            placeholder="Digite sua biografia"
+            onChange={(e) => {
+              setBio(e.target.value);
+            }}
+            value={bio}
+          ></textarea>
         </label>
         <input type="submit" value="Enviar" />
       </form>
