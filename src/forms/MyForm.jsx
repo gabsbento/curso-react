@@ -5,12 +5,13 @@ function MyForm({ user }) {
   const [name, setName] = React.useState(user ? user.name : "");
   const [email, setEmail] = React.useState(user ? user.email : "");
   const [bio, setBio] = React.useState("");
+  const [role, setRole] = React.useState("");
 
   const handleName = (e) => setName(e.target.value);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("enviando form");
+    console.log("enviando form", role, name, email, bio);
     setName("");
     setEmail("");
   };
@@ -50,6 +51,18 @@ function MyForm({ user }) {
             }}
             value={bio}
           ></textarea>
+        </label>
+        <label>
+          <span>Função</span>
+          <select
+            name="role"
+            onChange={(e) => setRole(e.target.value)}
+            value={role}
+          >
+            <option value="user">usuario</option>
+            <option value="editor">editor</option>
+            <option value="admin">admin</option>
+          </select>
         </label>
         <input type="submit" value="Enviar" />
       </form>
