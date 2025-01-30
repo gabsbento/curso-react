@@ -9,6 +9,11 @@
             "id":2,
             "name":"Calça vermelha",
             "price":90
+        },
+        {
+            "id":3,
+            "name":"Calça azul",
+            "price":90
         }
     ]
 }
