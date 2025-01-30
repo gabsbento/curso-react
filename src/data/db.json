@@ -1,19 +1,24 @@
 {
-    "products":[
-        {
-            "id":1,
-            "name":"Camisa",
-            "price":59.9
-        },
-        {
-            "id":2,
-            "name":"Calça vermelha",
-            "price":90
-        },
-        {
-            "id":3,
-            "name":"Calça azul",
-            "price":90
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Calça azul",
+      "price": 90
+    },
+    {
+      "id": "e92c",
+      "name": "teste",
+      "price": "12"
+    }
+  ]
 }
