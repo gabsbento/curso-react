@@ -1,12 +1,18 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import { useFetch } from "./hooks/useFetch";
+const url = "http://localhost:3001/products";
 function App() {
   const [products, setProducts] = useState([]);
+
+  const { data: items } = useFetch(url);
+
+  console.log(items);
+
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
-  const url = "http://localhost:3001/products";
 
-  useEffect(() => {
+  /*useEffect(() => {
     async function getProducts() {
       const response = await fetch(url);
       const data = await response.json();
@@ -14,7 +20,7 @@ function App() {
     }
 
     getProducts();
-  }, []);
+  }, []);*/
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,13 +43,14 @@ function App() {
     <div className="App">
       <h1>Hello World</h1>
       <ul>
-        {products.map((product) => {
-          return (
-            <li key={product.id}>
-              {product.name} - R$ {product.price}
-            </li>
-          );
-        })}
+        {items &&
+          items.map((product) => {
+            return (
+              <li key={product.id}>
+                {product.name} - R$ {product.price}
+              </li>
+            );
+          })}
       </ul>
       <div className="add-product">
         <form onSubmit={handleSubmit}>

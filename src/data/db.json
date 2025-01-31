@@ -29,6 +29,11 @@
       "id": "1baa",
       "name": "Bone",
       "price": "79,90"
+    },
+    {
+      "id": "f725",
+      "name": "teste",
+      "price": "124"
     }
   ]
 }
