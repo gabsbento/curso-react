@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 function App() {
   const [products, setProducts] = useState([]);
   const [name, setName] = useState("");
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState("");
   const url = "http://localhost:3001/products";
 
   useEffect(() => {
@@ -26,6 +26,11 @@ function App() {
       },
       body: JSON.stringify(product),
     });
+    const addedProduct = await res.json();
+    setProducts((prevProducts) => [...prevProducts, addedProduct]);
+
+    setName("");
+    setPrice("");
   };
 
   return (
