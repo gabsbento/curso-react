@@ -34,6 +34,11 @@
       "id": "f725",
       "name": "teste",
       "price": "124"
+    },
+    {
+      "id": "8bcd",
+      "name": "gabinete",
+      "price": "225"
     }
   ]
 }
