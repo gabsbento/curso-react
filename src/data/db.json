@@ -39,6 +39,11 @@
       "id": "8bcd",
       "name": "gabinete",
       "price": "225"
+    },
+    {
+      "id": "4812",
+      "name": "cpu",
+      "price": "950"
     }
   ]
 }
