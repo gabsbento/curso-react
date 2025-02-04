@@ -75,7 +75,12 @@ function App() {
               onChange={(e) => setPrice(e.target.value)}
             />
           </label>
-          <button type="submit">Cadastrar</button>
+          {loading && (
+            <button type="submit" disabled>
+              Carregando...
+            </button>
+          )}
+          {!loading && <button type="submit">Cadastrar</button>}
         </form>
       </div>
     </div>
